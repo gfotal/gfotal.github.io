@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Gaetan Fokom Talom, IT Operations and Application Support Analyst.">
-  <meta name="author" content="Gaetan Fokom Talom">
+  <meta name="description" content="Portfolio of Gaëtan Fokom Talom, IT Operations and Application Support Analyst.">
+  <meta name="author" content="Gaëtan Fokom Talom">
   <meta name="theme-color" content="#0b1f3a">
-  <title>Gaetan Fokom Talom | IT Operations & Application Support Analyst</title>
+  <title>Gaëtan Fokom Talom | IT Operations & Application Support Analyst</title>
 
   <style>
     :root {
@@ -246,6 +246,13 @@
     .credential-item + .credential-item { margin-top: 18px; }
     .credential-item strong { color: var(--navy); }
 
+    .case-steps { list-style: none; margin: 14px 0 0; padding: 0; }
+    .case-steps li { padding: 8px 0 8px 12px; border-left: 3px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+    .case-steps li + li { margin-top: 4px; }
+    .case-steps strong { color: var(--navy); }
+    .case-flow { margin: 0 0 28px; color: var(--navy); font-weight: 800; }
+    .case-flow span.step { padding: 6px 12px; margin: 4px 2px; background: #e5f9f7; color: #075e6a; border-radius: 999px; font-size: 0.85rem; }
+
     .contact {
       text-align: center;
       background: linear-gradient(135deg, #0b1f3a, #104f70);
@@ -278,8 +285,8 @@
     [data-en], [data-fr] { display: none; }
     body.lang-en [data-en] { display: inline; }
     body.lang-fr [data-fr] { display: inline; }
-    body.lang-en p[data-en], body.lang-fr p[data-fr], body.lang-en ul[data-en], body.lang-fr ul[data-fr] { display: block; }
-    body.lang-en .tag[data-en], body.lang-fr .tag[data-fr] { display: inline-block; }
+    body.lang-en p[data-en], body.lang-fr p[data-fr], body.lang-en ul[data-en], body.lang-fr ul[data-fr], body.lang-en div[data-en], body.lang-fr div[data-fr] { display: block; }
+    body.lang-en .tag[data-en], body.lang-fr .tag[data-fr], body.lang-en .step[data-en], body.lang-fr .step[data-fr] { display: inline-block; }
 
     @media (max-width: 1020px) {
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 12px 0; }
@@ -307,8 +314,10 @@
           <a href="#about"><span data-en>About</span><span data-fr>À propos</span></a>
           <a href="#expertise"><span data-en>Expertise</span><span data-fr>Expertise</span></a>
           <a href="#experience"><span data-en>Experience</span><span data-fr>Expérience</span></a>
+          <a href="#cases"><span data-en>Support cases</span><span data-fr>Cas de support</span></a>
           <a href="#projects"><span data-en>Projects</span><span data-fr>Projets</span></a>
           <a href="#credentials"><span data-en>Credentials</span><span data-fr>Formation</span></a>
+          <a href="#recognition"><span data-en>Recognition</span><span data-fr>Distinctions</span></a>
           <a href="#contact"><span data-en>Contact</span><span data-fr>Contact</span></a>
         </div>
 
@@ -325,13 +334,13 @@
     <section id="home" class="hero">
       <div class="container">
         <span class="eyebrow"><span data-en>French: fluent · English: intermediate</span><span data-fr>Français courant · Anglais intermédiaire</span></span>
-        <h1>Gaetan Fokom Talom</h1>
+        <h1>Gaëtan Fokom Talom</h1>
         <p data-en>IT Operations & Application Support Analyst with nearly 10 years of experience supporting banking payment systems, IT operations, infrastructure, technical projects, client service, and data-driven operational reporting.</p>
         <p data-fr>Analyste en exploitation informatique et soutien applicatif avec près de 10 ans d’expérience en soutien aux systèmes bancaires, opérations TI, infrastructures, projets techniques, service client et production de rapports opérationnels fondés sur les données.</p>
-        <!-- <p class="location"><span data-en>Based in Moncton, New Brunswick · Canadian permanent resident · Available immediately</span><span data-fr>Basé à Moncton, Nouveau-Brunswick · Résident permanent du Canada · Disponible immédiatement</span></p> -->
+        <p class="location"><span data-en>Based in Moncton, New Brunswick · Canadian permanent resident · Available immediately</span><span data-fr>Basé à Moncton, Nouveau-Brunswick · Résident permanent du Canada · Disponible immédiatement</span></p>
         <div class="actions">
           <a class="button primary" href="mailto:gfokomtalom@gmail.com"><span data-en>Contact me</span><span data-fr>Me contacter</span></a>
-          <a class="button secondary" href="https://www.linkedin.com/in/gaetan-fokom-talom-analyste-ti/" target="_blank" rel="noopener"><span data-en>Connect on LinkedIn</span><span data-fr>Me joindre sur LinkedIn</span></a>
+          <a class="button secondary" href="https://www.linkedin.com/in/ga%C3%ABtan-fokom-talom-512661451/" target="_blank" rel="noopener"><span data-en>Connect on LinkedIn</span><span data-fr>Me joindre sur LinkedIn</span></a>
           <a class="button secondary" href="#projects"><span data-en>View selected work</span><span data-fr>Voir les réalisations</span></a>
         </div>
       </div>
@@ -366,7 +375,7 @@
             <h3><span data-en>Payments & electronic banking</span><span data-fr>Monétique et systèmes de paiement</span></h3>
             <p data-en>Support and deployment of ATMs, POS terminals, cash deposit machines, cash recyclers, payment terminals, and banking technology integrations.</p>
             <p data-fr>Soutien et déploiement de GAB/ATM, terminaux POS, automates de dépôt, cash recyclers, terminaux de paiement et intégrations de technologies bancaires.</p>
-            <span class="tag">ATM / POS</span><span class="tag">EMV</span><span class="tag">ISO 8583</span><span class="tag">NDC / DDC</span>
+            <span class="tag">ATM / POS</span><span class="tag">EMV</span><span class="tag">ISO 8583</span><span class="tag">NDC / DDC</span><span class="tag">NCR</span><span class="tag">Diebold Nixdorf</span><span class="tag">GRG</span><span class="tag">Ingenico</span><span class="tag">Nexgo</span><span class="tag">PAX</span>
           </article>
           <article class="card">
             <h3><span data-en>IT operations & infrastructure</span><span data-fr>Opérations TI et infrastructure</span></h3>
@@ -378,13 +387,13 @@
             <h3><span data-en>Data, reporting & automation</span><span data-fr>Données, reporting et automatisation</span></h3>
             <p data-en>Transactional database queries, activity and uptime reporting, Excel-based analysis, dashboard preparation, and scripting for efficiency.</p>
             <p data-fr>Requêtes sur bases transactionnelles, rapports d’activité et de disponibilité, analyses avec Excel, préparation de tableaux de bord et scripting pour gagner en efficacité.</p>
-            <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Advanced Excel</span><span class="tag">Python</span><span class="tag">PowerShell</span>
+            <span class="tag">Advanced SQL</span><span class="tag">Power BI</span><span class="tag">Advanced Excel</span><span class="tag">Python</span><span class="tag">PowerShell</span>
           </article>
           <article class="card">
             <h3><span data-en>Service management</span><span data-fr>Gestion des services</span></h3>
             <p data-en>Structured incident diagnosis, escalation, SLA awareness, stakeholder communication, onboarding, training, documentation, and knowledge transfer.</p>
             <p data-fr>Diagnostic structuré des incidents, escalade, respect des SLA, communication avec les parties prenantes, intégration, formation, documentation et transfert de connaissances.</p>
-            <span class="tag">ITIL 4</span><span class="tag">SysAid</span><span class="tag">Cherwell</span><span class="tag">SLA</span>
+            <span class="tag">ITIL 4</span><span class="tag">SysAid</span><span class="tag">Incident &amp; escalation</span><span class="tag">Cherwell</span><span class="tag">SLA</span>
           </article>
           <article class="card">
             <h3><span data-en>Monitoring & security</span><span data-fr>Supervision et sécurité</span></h3>
@@ -396,7 +405,7 @@
             <h3><span data-en>Databases, applications & development</span><span data-fr>Bases de données, applications et développement</span></h3>
             <p data-en>Experience with relational databases, scripting, ERP applications, data integration, and business application deployment.</p>
             <p data-fr>Expérience des bases de données relationnelles, du scripting, des applications ERP, de l’intégration de données et du déploiement d’applications métier.</p>
-            <span class="tag">SQL Server</span><span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+            <span class="tag">SQL Server</span><span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">Node.js</span><span class="tag">APIs</span><span class="tag">Odoo ERP</span><span class="tag">Talend</span>
           </article>
         </div>
       </div>
@@ -410,7 +419,21 @@
         <div class="timeline">
 <article class="role"><div class="role-top"><h3><span data-en>IT Operations &amp; Support Administrator — AFG Bank Cameroon — Douala, Cameroon</span><span data-fr>Administrateur exploitation et support informatique — AFG Bank Cameroun — Douala, Cameroun</span></h3><span class="meta"><span data-en>Jan 2025 – Oct 2026</span><span data-fr>janv. 2025 – oct. 2026</span></span></div><ul data-en><li>Delivered Tier 1/2 IT support to bank employees, handling approximately 20 tickets daily through SysAid, from troubleshooting to resolution and escalation.</li><li>Administered and secured 500+ workstations using Active Directory, Microsoft Intune and Microsoft Defender for Endpoint; managed user accounts and permissions.</li><li>Supported the ongoing operation of banking platforms and investigated technical incidents affecting banking clearing processes.</li><li>Queried operational and transactional databases using advanced SQL to produce customized reports and operational information for business teams.</li><li>Monitored payment-system incidents and coordinated corrective action; deployed, configured and administered a commercial ATM monitoring solution covering 32 ATMs with automated alerts.</li></ul><ul data-fr><li>Assuré le support informatique L1/L2 des utilisateurs de la banque, avec environ 20 tickets traités par jour via SysAid : diagnostic, résolution et escalade.</li><li>Administré et sécurisé plus de 500 postes de travail avec Active Directory, Microsoft Intune et Microsoft Defender for Endpoint; géré les comptes et les accès utilisateurs.</li><li>Contribué au maintien en condition opérationnelle des plateformes bancaires et au support des incidents techniques de compensation.</li><li>Exploité les bases de données opérationnelles et transactionnelles avec des requêtes SQL avancées pour produire des états et rapports personnalisés pour les métiers.</li><li>Supervisé les incidents monétiques et coordonné les actions correctives; déployé, configuré et administré une solution commerciale de monitoring de 32 GAB avec alertes automatiques.</li></ul></article>
 <article class="role"><div class="role-top"><h3><span data-en>Technical Support &amp; Banking Equipment Team Lead — ADSNET-FINXCEL — Douala, Cameroon</span><span data-fr>Responsable du soutien technique et des équipements bancaires — ADSNET-FINXCEL — Douala, Cameroun</span></h3><span class="meta"><span data-en>Jun 2020 – Dec 2024</span><span data-fr>juin 2020 – déc. 2024</span></span></div><ul data-en><li>Led technical support and maintenance for a multi-client fleet of 100+ ATMs and 500 Ingenico POS terminals, directly managing four technicians.</li><li>Managed maintenance scheduling, task allocation, technician performance monitoring, training and support coordination for banking clients.</li><li>Helped reduce technical interventions by over 40% through proactive preventive maintenance, recurring-incident analysis and identification of operational bottlenecks.</li><li>Served as technical lead, deployment coordinator and systems integrator for three banking projects: CASH IN (Société Générale Cameroon), API/Cash Deposit (CCA Bank), and a GRG recycler connected to GIMAC (UBC).</li><li>Performed occasional work with Windows Server, Linux, VMware, Hyper-V, Nagios, Zabbix, EyeOnNetwork and IPsec VPNs; managed client/vendor technical relationships and escalations.</li></ul><ul data-fr><li>Dirigé le support et la maintenance d’un parc multiclient de plus de 100 GAB et 500 TPE Ingenico, avec la supervision directe de quatre techniciens.</li><li>Assuré la planification des interventions, la répartition des tâches, le suivi des techniciens, leur formation et la coordination des services auprès des banques clientes.</li><li>Contribué à réduire de plus de 40 % les interventions techniques grâce à la maintenance préventive, à l’analyse des incidents récurrents et à l’identification des goulots d’étranglement.</li><li>Agi comme référent technique, responsable du déploiement et intégrateur pour trois projets : CASH IN (Société Générale Cameroun), API/Cash Deposit (CCA Bank) et recycleur GRG relié au réseau GIMAC (UBC).</li><li>Réalisé ponctuellement des interventions sur Windows Server, Linux, VMware, Hyper-V, Nagios, Zabbix, EyeOnNetwork et VPN IPsec; géré les escalades, relations clients et fournisseurs.</li></ul></article>
-<article class="role"><div class="role-top"><h3><span data-en>IT Support Engineer — IPRO SARL — Douala, Cameroon</span><span data-fr>Ingénieur de soutien informatique — IPRO SARL — Douala, Cameroun</span></h3><span class="meta"><span data-en>Sep 2016 – May 2020</span><span data-fr>sept. 2016 – mai 2020</span></span></div><ul data-en><li>Installed, configured and maintained ATMs for Banque Atlantique and NFC Bank; resolved hardware, software and network incidents.</li><li>Delivered remote and on-site Tier 1/2 support to enterprise users and infrastructure, including British American Tobacco, Schneider Electric and Wärtsilä.</li><li>Tracked incidents and service requests using Cherwell and Fujitsu support tools in accordance with SLAs.</li><li>Installed, configured and administered Odoo; built Talend data integration workflows and supported mobile and web- based business application rollouts.</li><li>Took on technical coordination responsibilities toward the end of the role; named Employee of the Semester twice consecutively.</li></ul><ul data-fr><li>Installé, configuré et maintenu des GAB pour Banque Atlantique et NFC Bank; diagnostiqué et résolu les incidents matériels, logiciels et réseau.</li><li>Fourni le support L1/L2 à distance et sur site aux utilisateurs et infrastructures de grands comptes, dont British American Tobacco, Schneider Electric et Wärtsilä.</li><li>Suivi les incidents et demandes de service au moyen de Cherwell et d’outils Fujitsu, conformément aux SLA.</li><li>Installé, configuré et administré Odoo; créé des flux d’intégration de données avec Talend et contribué au déploiement d’applications mobiles et Web.</li><li>Pris des responsabilités de coordination technique en fin de parcours; élu « Employé du semestre » deux fois consécutives.</li></ul></article>
+<article class="role"><div class="role-top"><h3><span data-en>IT Support Engineer — IPRO SARL — Douala, Cameroon</span><span data-fr>Ingénieur de soutien informatique — IPRO SARL — Douala, Cameroun</span></h3><span class="meta"><span data-en>Sep 2016 – May 2020</span><span data-fr>sept. 2016 – mai 2020</span></span></div><ul data-en><li>Installed, configured and maintained ATMs for Banque Atlantique and NFC Bank; resolved hardware, software and network incidents.</li><li>Delivered remote and on-site Tier 1/2 support to enterprise users and infrastructure, including British American Tobacco, Schneider Electric and Wärtsilä.</li><li>Tracked incidents and service requests using Cherwell and Fujitsu support tools in accordance with SLAs.</li><li>Installed, configured and administered Odoo; built Talend data integration workflows and supported mobile and web-based business application rollouts.</li><li>Took on technical coordination responsibilities and provided guidance to team members toward the end of the role; named Employee of the Semester twice consecutively.</li></ul><ul data-fr><li>Installé, configuré et maintenu des GAB pour Banque Atlantique et NFC Bank; diagnostiqué et résolu les incidents matériels, logiciels et réseau.</li><li>Fourni le support L1/L2 à distance et sur site aux utilisateurs et infrastructures de grands comptes, dont British American Tobacco, Schneider Electric et Wärtsilä.</li><li>Suivi les incidents et demandes de service au moyen de Cherwell et d’outils Fujitsu, conformément aux SLA.</li><li>Installé, configuré et administré Odoo; créé des flux d’intégration de données avec Talend et contribué au déploiement d’applications mobiles et Web.</li><li>Pris des responsabilités de coordination technique et encadré les membres de l’équipe en fin de parcours; élu « Employé du semestre » deux fois consécutives.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="container">
+        <h2><span data-en>Support case studies</span><span data-fr>Études de cas en support</span></h2>
+        <p class="lead" data-en>Real incidents I resolved, anonymized to respect banking confidentiality. Each one follows the same method.</p>
+        <p class="lead" data-fr>Des incidents réels que j’ai résolus, anonymisés pour respecter la confidentialité bancaire. Chacun suit la même méthode.</p>
+        <p class="case-flow"><span class="step" data-en>1. Understand</span><span class="step" data-fr>1. Comprendre</span> → <span class="step" data-en>2. Diagnose</span><span class="step" data-fr>2. Diagnostiquer</span> → <span class="step" data-en>3. Fix</span><span class="step" data-fr>3. Corriger</span> → <span class="step" data-en>4. Confirm</span><span class="step" data-fr>4. Confirmer</span> → <span class="step" data-en>5. Document</span><span class="step" data-fr>5. Documenter</span></p>
+        <div class="grid three">
+          <article class="card project"><h3><span data-en>Locked user account</span><span data-fr>Compte utilisateur verrouillé</span></h3><p data-en><strong>Context:</strong> a bank employee could not log in to his workstation and could not work.</p><p data-fr><strong>Contexte :</strong> un employé de la banque ne pouvait plus se connecter à son poste et ne pouvait plus travailler.</p><ul class="case-steps" data-en><li><strong>Diagnosis:</strong> Logged the ticket in SysAid as high priority, verified the user’s identity by calling back his official extension, then asked what had changed. He had changed his password the day before. Active Directory showed a locked account; sign-in logs traced the failed attempts to his phone, still using the old password.</li><li><strong>Action:</strong> Unlocked the account and guided the user to update the password on his phone.</li><li><strong>Confirmation:</strong> The user logged in successfully while still on the line; ticket closed only after his confirmation.</li><li><strong>Prevention:</strong> Explained how account lockout works, shared password tips, and documented the case.</li></ul><ul class="case-steps" data-fr><li><strong>Diagnostic :</strong> Ticket enregistré dans SysAid en priorité haute, identité vérifiée par rappel sur son poste officiel, puis question sur ce qui avait changé : il avait modifié son mot de passe la veille. Active Directory indiquait un compte verrouillé; les journaux de connexion montraient des échecs provenant de son téléphone, qui utilisait encore l’ancien mot de passe.</li><li><strong>Action :</strong> Déverrouillage du compte et accompagnement de l’utilisateur pour mettre à jour le mot de passe sur son téléphone.</li><li><strong>Confirmation :</strong> Connexion réussie pendant l’appel; ticket fermé seulement après confirmation de l’utilisateur.</li><li><strong>Prévention :</strong> Explication du fonctionnement du verrouillage, conseils sur la gestion du mot de passe et documentation du cas.</li></ul><p class="result"><span data-en>Skills: ITIL incident process · identity verification · Active Directory · log analysis</span><span data-fr>Compétences : processus d’incident ITIL · vérification d’identité · Active Directory · analyse de journaux</span></p></article>
+          <article class="card project"><h3><span data-en>Core banking data request</span><span data-fr>Extraction de données du core banking</span></h3><p data-en><strong>Context:</strong> a manager requested data from the core banking database to steer business activity.</p><p data-fr><strong>Contexte :</strong> un gestionnaire demandait des données de la base du core banking pour piloter son activité.</p><ul class="case-steps" data-en><li><strong>Diagnosis:</strong> Analyzed the request, reviewed internal procedures, verified access rights and data sensitivity, and checked that no existing report already covered the need.</li><li><strong>Action:</strong> Explored the database schema and built an advanced SQL query matching the request.</li><li><strong>Confirmation:</strong> Tested the results against the request, delivered the dataset, and obtained the requester’s confirmation that it met his need.</li><li><strong>Prevention:</strong> Documented the query and added it to the bank’s query backlog and reporting space for reuse.</li></ul><ul class="case-steps" data-fr><li><strong>Diagnostic :</strong> Analyse du besoin, consultation des procédures, vérification des droits d’accès et des données requises, et contrôle qu’aucun rapport existant ne couvrait déjà la demande.</li><li><strong>Action :</strong> Exploration du schéma de la base et construction d’une requête SQL avancée répondant à la demande.</li><li><strong>Confirmation :</strong> Test des résultats par rapport à la demande, mise à disposition du jeu de données et confirmation du demandeur.</li><li><strong>Prévention :</strong> Documentation de la requête et ajout au registre des requêtes et à l’espace de reporting de la banque pour réutilisation.</li></ul><p class="result"><span data-en>Skills: application support · advanced SQL · access control · user validation</span><span data-fr>Compétences : soutien applicatif · SQL avancé · contrôle des accès · validation utilisateur</span></p></article>
+          <article class="card project"><h3><span data-en>ATM withdrawal: debited, no cash</span><span data-fr>Retrait GAB : client débité sans billets</span></h3><p data-en><strong>Context:</strong> a customer was debited after an ATM withdrawal but received no cash; the call center escalated the ticket to my team.</p><p data-fr><strong>Contexte :</strong> un client a été débité après un retrait au GAB sans recevoir ses billets; le centre d’appels a remonté le ticket à mon équipe.</p><ul class="case-steps" data-en><li><strong>Diagnosis:</strong> Reviewed the ticket and confirmed customer details. Found the transaction in the ATM logs, with a cash-dispenser error. Compared the ATM cash balance before and after: unchanged — first evidence no cash was dispensed.</li><li><strong>Action:</strong> Performed an ATM cash count to confirm the physical difference, then confirmed the debit in the core banking system with a SQL query on the customer’s statement.</li><li><strong>Confirmation:</strong> Submitted the evidence to operations, which triggered the customer refund; verified the refund was completed.</li><li><strong>Prevention:</strong> Documented each step and the full resolution process for the team.</li></ul><ul class="case-steps" data-fr><li><strong>Diagnostic :</strong> Analyse du ticket et confirmation des informations du client. Transaction retrouvée dans les journaux du GAB, avec une erreur du module distributeur. Comparaison des soldes du GAB avant et après : aucun changement, première preuve que les billets n’ont pas été distribués.</li><li><strong>Action :</strong> Arrêté de caisse du GAB pour constater l’écart physique, puis confirmation du débit dans le core banking par une requête SQL sur le relevé du client.</li><li><strong>Confirmation :</strong> Transmission des preuves aux opérations, qui ont déclenché le remboursement du client; vérification que le remboursement a bien été effectué.</li><li><strong>Prévention :</strong> Documentation de chaque étape et du processus complet de résolution pour l’équipe.</li></ul><p class="result"><span data-en>Skills: evidence-based investigation · ATM logs · reconciliation · SQL · customer impact</span><span data-fr>Compétences : enquête fondée sur des preuves · journaux GAB · rapprochement · SQL · impact client</span></p></article>
         </div>
       </div>
     </section>
@@ -421,9 +444,9 @@
         <p class="lead" data-en>Selected examples of professional work. Descriptions remain high-level to respect the confidentiality and security requirements of banking environments.</p>
         <p class="lead" data-fr>Exemples sélectionnés de réalisations professionnelles. Les descriptions restent à un niveau général afin de respecter les exigences de confidentialité et de sécurité propres aux environnements bancaires.</p>
         <div class="grid three">
-          <article class="card project"><h3><span data-en>Cash-in automate deployment</span><span data-fr>Déploiement d’automates cash-in</span></h3><p data-en>Supported the delivery of cash-in automated banking machines for Société Générale Cameroun, contributing to technical deployment, validation, and operational readiness.</p><p data-fr>Participer à la livraison d’automates bancaires cash-in pour Société Générale Cameroun, notamment au déploiement technique, à la validation et à la préparation opérationnelle.</p><p class="result"><span data-en>Focus: deployment, validation, service continuity</span><span data-fr>Axes : déploiement, validation, continuité de service</span></p></article>
-          <article class="card project"><h3><span data-en>Cash deposit & API rollout</span><span data-fr>Déploiement cash deposit et API</span></h3><p data-en>Contributed to an API integration and cash-deposit rollout for CCA Bank, connecting operational requirements with implementation, configuration, technical support, and stakeholder communication.</p><p data-fr>Contribuer à une intégration API et à un déploiement de dépôt d’espèces pour CCA Bank, en reliant les exigences opérationnelles à l’implémentation, la configuration, le soutien technique et la communication avec les parties prenantes.</p><p class="result"><span data-en>Focus: integration, configuration, stakeholder support</span><span data-fr>Axes : intégration, configuration, soutien aux parties prenantes</span></p></article>
-          <article class="card project"><h3><span data-en>GRG cash recycler on GIMAC</span><span data-fr>Cash recycler GRG sur GIMAC</span></h3><p data-en>Participated in deployment of a GRG cash recycler for UBC on the GIMAC network, applying payment-infrastructure knowledge during technical setup, testing, and go-live support.</p><p data-fr>Participer au déploiement d’un cash recycler GRG pour UBC sur le réseau GIMAC, en appliquant les connaissances en infrastructure de paiement lors de l’installation, des tests et du soutien au démarrage.</p><p class="result"><span data-en>Focus: payment infrastructure, testing, go-live support</span><span data-fr>Axes : infrastructure de paiement, tests, soutien au démarrage</span></p></article>
+          <article class="card project"><h3><span data-en>Cash-in automate deployment</span><span data-fr>Déploiement d’automates cash-in</span></h3><p data-en>Acted as technical lead, deployment coordinator and systems integrator for cash-in automated banking machines for Société Générale Cameroon, covering technical deployment, validation, and operational readiness.</p><p data-fr>Agi comme référent technique, coordonnateur du déploiement et intégrateur pour des automates bancaires cash-in de Société Générale Cameroun, couvrant le déploiement technique, à la validation et à la préparation opérationnelle.</p><p class="result"><span data-en>Focus: deployment, validation, service continuity</span><span data-fr>Axes : déploiement, validation, continuité de service</span></p></article>
+          <article class="card project"><h3><span data-en>Cash deposit & API rollout</span><span data-fr>Déploiement cash deposit et API</span></h3><p data-en>Led the technical delivery and integration of an API and cash-deposit rollout for CCA Bank, connecting operational requirements with implementation, configuration, technical support, and stakeholder communication.</p><p data-fr>Dirigé la livraison technique et l’intégration d’une API et d’un déploiement de dépôt d’espèces pour CCA Bank, en reliant les exigences opérationnelles à l’implémentation, la configuration, le soutien technique et la communication avec les parties prenantes.</p><p class="result"><span data-en>Focus: integration, configuration, stakeholder support</span><span data-fr>Axes : intégration, configuration, soutien aux parties prenantes</span></p></article>
+          <article class="card project"><h3><span data-en>GRG cash recycler on GIMAC</span><span data-fr>Cash recycler GRG sur GIMAC</span></h3><p data-en>Led, as technical lead and systems integrator, the deployment of a GRG cash recycler for UBC connected to the GIMAC network, applying payment-infrastructure knowledge during technical setup, testing, and go-live support.</p><p data-fr>Dirigé, comme référent technique et intégrateur, le déploiement d’un recycleur GRG pour UBC relié au réseau GIMAC, en appliquant les connaissances en infrastructure de paiement lors de l’installation, des tests et du soutien au démarrage.</p><p class="result"><span data-en>Focus: payment infrastructure, testing, go-live support</span><span data-fr>Axes : infrastructure de paiement, tests, soutien au démarrage</span></p></article>
         </div>
       </div>
     </section>
@@ -451,6 +474,28 @@
       </div>
     </section>
 
+    <section id="recognition">
+      <div class="container">
+        <h2><span data-en>Recognition &amp; strengths</span><span data-fr>Distinctions et forces</span></h2>
+        <div class="grid two">
+          <article class="card">
+            <h3><span data-en>Awards &amp; recognition</span><span data-fr>Distinctions</span></h3>
+            <div class="credential-item"><strong>AFG Bank Cameroon — 2026</strong><br><span data-en>Ranked 3rd Best Back Office Employee in the Q2 2026 Back Office Challenge.</span><span data-fr>Classé 3e meilleur employé du Back Office au Back Office Challenge du 2e trimestre 2026.</span></div>
+            <div class="credential-item"><strong>IPRO SARL</strong><br><span data-en>Named Employee of the Semester twice consecutively for service quality and reliable technical support.</span><span data-fr>Élu « Employé du semestre » deux fois consécutives pour la qualité du service et la fiabilité du soutien technique.</span></div>
+          </article>
+          <article class="card">
+            <h3><span data-en>Professional strengths</span><span data-fr>Forces professionnelles</span></h3>
+            <span class="tag" data-en>Problem solving &amp; analytical thinking</span><span class="tag" data-fr>Résolution de problèmes et esprit d’analyse</span>
+            <span class="tag" data-en>Customer service &amp; communication</span><span class="tag" data-fr>Service client et communication</span>
+            <span class="tag" data-en>Prioritization &amp; organization</span><span class="tag" data-fr>Priorisation et organisation</span>
+            <span class="tag" data-en>Leadership &amp; teamwork</span><span class="tag" data-fr>Leadership et travail d’équipe</span>
+            <span class="tag" data-en>Proactive approach &amp; continuous improvement</span><span class="tag" data-fr>Proactivité et amélioration continue</span>
+            <span class="tag" data-en>Adaptability</span><span class="tag" data-fr>Adaptabilité</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="container">
         <h2><span data-en>Let’s connect</span><span data-fr>Restons en contact</span></h2>
@@ -459,13 +504,13 @@
         <div class="contact-items">
           <a href="mailto:gfokomtalom@gmail.com">gfokomtalom@gmail.com</a>
           <!-- <a href="tel:+14282011738">+1 428 201 1738</a> -->
-          <a href="https://www.linkedin.com/in/gaetan-fokom-talom-analyste-ti/" target="_blank" rel="noopener"><span data-en>Connect on LinkedIn</span><span data-fr>Me joindre sur LinkedIn</span></a>
+          <a href="https://www.linkedin.com/in/ga%C3%ABtan-fokom-talom-512661451/" target="_blank" rel="noopener"><span data-en>Connect on LinkedIn</span><span data-fr>Me joindre sur LinkedIn</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 Gaetan Fokom Talom · <span data-en>IT Operations & Application Support Analyst</span><span data-fr>Analyste en exploitation informatique et soutien applicatif</span> · <span data-en>Built for GitHub Pages</span><span data-fr>Conçu pour GitHub Pages</span></footer>
+  <footer>© 2026 Gaëtan Fokom Talom · <span data-en>IT Operations & Application Support Analyst</span><span data-fr>Analyste en exploitation informatique et soutien applicatif</span></footer>
 
   <script>
     function setLanguage(language) {
